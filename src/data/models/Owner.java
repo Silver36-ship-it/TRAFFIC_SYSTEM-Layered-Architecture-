@@ -7,13 +7,7 @@ public class Owner {
     private String phoneNumber;
     private Gender gender;
 
-    public Owner(String fullName, String address, String email, String phoneNumber, Gender gender) {
-        this.fullName = fullName;
-        this.address = address;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.gender = gender;
-    }
+
     public String getFullName() {
         return fullName;
     }

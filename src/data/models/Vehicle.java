@@ -12,17 +12,10 @@ public class Vehicle {
     private String color;
     private String plateNumber;
     private Owner owner;
+    private String chasisNumber;
     private List<Ticket> tickets = new ArrayList<>();
 
-    public Vehicle(int id, String name, String model, Year year, String color, String plateNumber, Owner owner) {
-        this.id = id;
-        this.name = name;
-        this.model = model;
-        this.year = year;
-        this.color = color;
-        this.plateNumber = plateNumber;
-        this.owner = owner;
-    }
+
     public int getId() {
         return id;
     }
@@ -64,6 +57,12 @@ public class Vehicle {
     }
     public void setOwner(Owner owner) {
         this.owner = owner;
+    }
+    public String getChasisNumber() {
+        return chasisNumber;
+    }
+    public void setChasisNumber(String chasisNumber) {
+        this.chasisNumber = chasisNumber;
     }
     public List<Ticket> getTickets() {
         return tickets;
