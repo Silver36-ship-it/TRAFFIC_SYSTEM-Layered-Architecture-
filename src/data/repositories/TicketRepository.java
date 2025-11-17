@@ -2,6 +2,7 @@ package data.repositories;
 
 import data.models.Ticket;
 
+import java.util.List;
 import java.util.Map;
 
 public interface TicketRepository {
@@ -12,4 +13,5 @@ public interface TicketRepository {
     void deleteAll();
     void deleteById(int id);
     long count();
+    List<Ticket> findByVehicleId(int vehicledId);
 }

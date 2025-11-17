@@ -19,16 +19,20 @@ public class OfficersTest {
     }
     @Test
         void testThatOfficersCanBeCreated(){
-            Officer officer = new Officer(1,"name","rank");
+            Officer officer = new Officer();
+            officer.setId(1);
             Officer savedOfficer = officers.save(officer);
             Officer checkOfficer = officers.findById(1);
             assertEquals(savedOfficer,checkOfficer);
     }
     @Test
         void testThatOfficersCanFindAllOfficers(){
-            Officer officer = new Officer(1,"name","rank");
-            Officer officer1  = new Officer(2,"name","rank");
-            Officer officer2  = new Officer(3,"name","rank");
+            Officer officer = new Officer();
+            officer.setId(1);
+            Officer officer1  = new Officer();
+            officer1.setId(2);
+            Officer officer2  = new Officer();
+            officer2.setId(3);
             officers.save(officer);
             officers.save(officer1);
             officers.save(officer2);
@@ -37,8 +41,10 @@ public class OfficersTest {
     }
     @Test
         void testThatOfficersCanBeDeleted(){
-        Officer officer = new Officer(1,"name","rank");
-        Officer officer1  = new Officer(2,"name","rank");
+        Officer officer = new Officer();
+        officer.setId(1);
+        Officer officer1  = new Officer();
+        officer.setId(1);
         officers.save(officer);
         officers.save(officer1);
         officers.delete(officer1);
@@ -46,9 +52,14 @@ public class OfficersTest {
     }
     @Test
         void testThatOfficersCanBeUpdated(){
-        Officer officer = new Officer(1,"name","rank");
-        Officer officer1  = new Officer(2,"name","rank");
-        Officer officer2  = new Officer(2,"fullName","rank");
+        Officer officer = new Officer();
+        officer.setId(1);
+        Officer officer1  = new Officer();
+        officer.setId(2);
+        officer.setName("name");
+        Officer officer2  = new Officer();
+        officer.setId(2);
+        officer.setName("fullName");
         officers.save(officer);
         officers.save(officer1);
         officers.save(officer2);
@@ -57,9 +68,9 @@ public class OfficersTest {
     }
     @Test
         void testThatOfficersAppCanDeleteAll() {
-        Officer officer = new Officer(1, "name", "rank");
-        Officer officer1 = new Officer(2, "name", "rank");
-        Officer officer2 = new Officer(3, "name", "rank");
+        Officer officer = new Officer();
+        Officer officer1 = new Officer();
+        Officer officer2 = new Officer();
         officers.save(officer);
         officers.save(officer1);
         officers.save(officer2);

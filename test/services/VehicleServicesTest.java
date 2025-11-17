@@ -4,7 +4,6 @@ import data.models.Vehicle;
 import data.repositories.VehicleRepository;
 import data.repositories.Vehicles;
 import dtos.requests.VehicleRequest;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

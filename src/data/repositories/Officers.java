@@ -6,7 +6,7 @@ import exceptions.OfficerNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Officers implements OffiicerRepository{
+public class Officers implements OfficerRepository {
     Map<Integer, Officer> officers = new HashMap<>();
     int nextId = 1;
 
@@ -55,5 +55,15 @@ public class Officers implements OffiicerRepository{
     @Override
     public long count() {
         return officers.size();
+    }
+    @Override
+    public Officer findByEmail(String email) {
+        for (Officer officer : officers.values()) {
+            if(officer.getEmail().equalsIgnoreCase(email)){
+                return officer;
+            }
+
+        }
+        return null;
     }
 }

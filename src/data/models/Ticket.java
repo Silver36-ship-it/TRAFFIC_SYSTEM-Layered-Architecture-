@@ -12,15 +12,8 @@ public class Ticket {
     private Officer issuer;
     private LocalDateTime dateOfBooking;
     private LocalDateTime dateOfPayment;
+    private boolean settled;
 
-    public Ticket(int id,Vehicle vehicle, Offence offence, Officer issuer) {
-        this.id = id;
-        this.vehicle = vehicle;
-        this.offence = offence;
-        this.issuer = issuer;
-        this.hasPaid = false;
-        this.dateOfBooking = LocalDateTime.now();
-    }
     public int getId() {
         return id;
     }
@@ -34,9 +27,6 @@ public class Ticket {
         this.vehicle = vehicle;
     }
     public Offence getOffence() {
-        if(offence == null) {
-            throw new NoOffenceDetectedException("No offence has been assigned to this ticket");
-        }
         return offence;
     }
     public void setOffence(Offence offence) {
@@ -62,8 +52,17 @@ public class Ticket {
     public LocalDateTime getDateOfBooking() {
         return dateOfBooking;
     }
+    public void setDateOfBooking(LocalDateTime dateOfBooking) {
+        this.dateOfBooking = dateOfBooking;
+    }
     public LocalDateTime getDateOfPayment() {
         return dateOfPayment;
+    }
+    public boolean isSettled() {
+        return settled;
+    }
+    public void setSettled(boolean settled){
+        this.settled = settled;
     }
     public String toString(){
         return "Ticket{"+

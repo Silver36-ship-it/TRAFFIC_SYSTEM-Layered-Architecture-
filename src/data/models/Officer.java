@@ -4,12 +4,9 @@ public class Officer {
     private int id;
     private String name;
     private String rank;
+    private String email;
 
-    public Officer(int id, String name, String rank) {
-        this.id = id;
-        this.name = name;
-        this.rank = rank;
-    }
+
     public int getId() {
         return id;
     }
@@ -27,5 +24,11 @@ public class Officer {
     }
     public void setRank(String rank) {
         this.rank = rank;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
