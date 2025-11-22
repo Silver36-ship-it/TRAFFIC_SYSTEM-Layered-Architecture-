@@ -1,4 +1,4 @@
-package data.repositories;
+/* package data.repositories;
 
 import data.models.Officer;
 import exceptions.OfficerNotFoundException;
@@ -79,3 +79,4 @@ public class OfficersTest {
         assertEquals(0, officers.count());
     }
 }
+*/

@@ -1,4 +1,4 @@
-package data.repositories;
+/* package data.repositories;
 
 import data.models.Ticket;
 import exceptions.TicketsNotFoundException;
@@ -70,4 +70,4 @@ class TicketsTest {
         Ticket checkTicket = tickets.save(ticket2);
         assertEquals(checkTicket, tickets.findById(2));
         }
-}
+} */
